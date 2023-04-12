@@ -20,6 +20,16 @@ public class TargetHealth : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            TargetDestroy();
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Projectile"))

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ProjectileGun : MonoBehaviour
 {
+    public int damage = 10;
+
     //bullet
     public GameObject bullet;
 
@@ -80,7 +82,15 @@ public class ProjectileGun : MonoBehaviour
         //Check id ray hits something
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
+        {
             targetPoint = hit.point;
+
+            if (hit.collider.gameObject.GetComponent<TargetHealth>() != null)
+            {
+                hit.collider.gameObject.GetComponent<TargetHealth>().TakeDamage(damage);
+            }
+        }
+            
         else
             targetPoint = ray.GetPoint(75); //A point far away from player
 
