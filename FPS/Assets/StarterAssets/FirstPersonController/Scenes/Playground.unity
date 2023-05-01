@@ -813,8 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1104176c7cc644da61bb39cb631bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 400
-  sensY: 400
+  sensX: 125
+  sensY: 125
   orientation: {fileID: 979132784}
 --- !u!1 &451683900
 GameObject:
@@ -1095,6 +1095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c49006c8608c2448b868c329373dec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
   bullet: {fileID: 852566597}
   shootForce: 50
   upwardForce: 0
